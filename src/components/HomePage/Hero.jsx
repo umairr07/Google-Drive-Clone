@@ -206,7 +206,7 @@ function Hero() {
               mobile device, tablet, or computer
             </p>
           </div>
-          <div className="flex gap-3 my-10 text-[17px]">
+          <div className="flex gap-3 my-10 text-[17px] ">
             <p>Don`t have an account? </p>
             <button className="text-[#1A73E8]" onClick={openModal}>
               Signin to create account
