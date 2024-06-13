@@ -178,7 +178,7 @@ function Data({ files }) {
           <p></p>
         ) : (
           menu && (
-            <div className="p-3 flex gap-10 flex-wrap sm:justify-center">
+            <div className="p-3 flex gap-10 flex-wrap sm:justify-center lg:justify-start">
               {newFiles.map((file, idx) => (
                 <div key={file.id}>
                   <div className="w-[350px] h-[200px] bg-[#F0F5F8] p-3 rounded-lg flex flex-col gap-4 cursor-pointer dark:bg-[#282A2C] ">
