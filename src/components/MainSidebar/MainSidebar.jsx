@@ -21,17 +21,15 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Data from "./Data";
 import { Link } from "react-router-dom";
 // import ScreenreaderLabelExample from "./ProgressBar";
 
-function Siderbar() {
+function MainSidebar() {
   const [modal, setModal] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [file, setFile] = useState(null);
   const [files, setFiles] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
-  const [myDrive, setMyDrive] = useState(false);
 
   const auth = getAuth();
 
@@ -99,7 +97,6 @@ function Siderbar() {
       }
     }
   };
-
   return (
     <div>
       <Modal open={modal} onClose={handleOnClose}>
@@ -150,57 +147,58 @@ function Siderbar() {
             </Link>
             <Link to="/mydrive">
               <div
-                className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]"
+                className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] hover:bg-[#E9EEF6] p-2  rounded-2xl dark:bg-[#282A2C]"
                 // onClick={goToMyDrive}
               >
                 <FaGoogleDrive className="text-2xl" />
                 <span>My Drive</span>
               </div>
             </Link>
+
             <Link to={"/computer"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px]  w-[250px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
                 <FaComputer className="text-2xl" />
                 <span>Computers</span>
               </div>
             </Link>
 
-            <Link to={"/starred"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+            <Link to={"/shared"}>
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
                 <FaUserFriends className="text-2xl" />
                 <span>Shared with me</span>
               </div>
             </Link>
 
             <Link to={"/recent"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
                 <MdOutlineWatchLater className="text-2xl" />
                 <span>Recent</span>
               </div>
             </Link>
 
-            <Link to={"/shared"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+            <Link to={"/starred"}>
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
                 <IoMdStarOutline className="text-2xl" />
                 <span>Starred</span>
               </div>
             </Link>
 
             <Link to={"/spam"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
                 <RiSpam2Line className="text-2xl" />
                 <span>Spam</span>
               </div>
             </Link>
 
             <Link to={"/bin"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
                 <RiDeleteBin6Line className="text-2xl" />
                 <span>Bin</span>
               </div>
             </Link>
 
             <Link to={"/storage"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
                 <TiCloudStorageOutline className="text-2xl" />
                 <span>Storage</span>
               </div>
@@ -210,13 +208,9 @@ function Siderbar() {
             </div> */}
           </div>
         </div>
-
-        <div className="w-[80%] bg-[#fff] m-4 p-3 rounded-xl dark:bg-[#131314]">
-          <Data files={files} />
-        </div>
       </div>
     </div>
   );
 }
 
-export default Siderbar;
+export default MainSidebar;

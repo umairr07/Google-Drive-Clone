@@ -26,22 +26,23 @@ function Navbar() {
       let userCredential = await signInWithPopup(auth, googleProvider);
       setUser(userCredential?.user);
       console.log(userCredential.user, "user logged in");
-      console.log("User:", userCredential);
-      console.log(userCredential?.user?.photoURL);
+      localStorage.setItem(
+        "photoURL",
+        JSON.stringify(userCredential?.user?.photoURL)
+      );
       setPhotoURL(userCredential?.user?.photoURL);
-      console.log(photoURL, "photo");
       navigate("/drive");
     } catch (err) {
       console.log(err);
     }
   };
 
-  useEffect(() => {
-    // This effect will run whenever `user` state changes
-    if (user && user.photoURL) {
-      setPhotoURL(user.photoURL);
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   // This effect will run whenever `user` state changes
+  //   if (user && user.photoURL) {
+  //     setPhotoURL(user.photoURL);
+  //   }
+  // }, [user]);
 
   const sigupWIthEmailAndPass = async () => {
     try {
@@ -70,6 +71,13 @@ function Navbar() {
     }
   };
 
+  // const gotoDrive = () => {
+  //   console.log(user);
+  //   if (user) {
+  //     navigate("/drive");
+  //   }
+  // };
+
   const openModal = () => setModalOpen(true);
   const handleClose = () => setModalOpen(false);
 
@@ -83,7 +91,7 @@ function Navbar() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-[550px] bg-white shadow-lg p-4 rounded-xl">
+        <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-[550px] bg-white shadow-lg p-4 rounded-xl ">
           <div className="flex flex-col justify-center items-center gap-5 my-2">
             <img src={GOOGLE_LOGO} alt="" className="w-[100px]" />
             <div className="text-center">
@@ -213,12 +221,14 @@ function Navbar() {
           >
             Sign in
           </button>
-          <button className="p-2 font-semibold bg-[#1A73E8] text-[#fff] rounded-lg w-[120px]">
+          <button
+            className="p-2 font-semibold bg-[#1A73E8] text-[#fff] rounded-lg w-[120px]"
+            // onClick={gotoDrive}
+          >
             Go to Drive
           </button>
         </div>
       </div>
-      {user && <Header newPhoto={photoURL} />}
     </div>
   );
 }
