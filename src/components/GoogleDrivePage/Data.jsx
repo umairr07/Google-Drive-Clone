@@ -90,7 +90,7 @@ function Data({ files }) {
                   value={searchValue}
                   onChange={filterBySearch}
                   type="search"
-                  className="w-[500px] p-3 focus:outline-none focus:ring-0 bg-[#E9EFF7] dark:bg-[#282A2C]"
+                  className="lg:w-[500px] p-3 focus:outline-none focus:ring-0 bg-[#E9EFF7] dark:bg-[#282A2C] sm:w-[200px] "
                   placeholder="Search in drive"
                 />
               </div>
@@ -144,7 +144,7 @@ function Data({ files }) {
         ) : (
           app && (
             <div>
-              <div className="flex justify-between p-2">
+              <div className="flex justify-between p-2 sm:hidden lg:flex">
                 <p>File Name</p>
                 <p>Size</p>
                 <p>Last Modified</p>
@@ -152,7 +152,7 @@ function Data({ files }) {
               {newFiles.map((file, idx) => (
                 <div
                   key={file.id} // using file.id instead of idx
-                  className="flex justify-between my-5 bg-[#E9EFF7] p-2 rounded-lg dark:bg-[#282A2C]"
+                  className="flex justify-between my-5 bg-[#E9EFF7] p-2 rounded-lg dark:bg-[#282A2C] sm:flex-col sm:justify-center  lg:flex-row lg:justify-between lg:p-3"
                 >
                   <a
                     href={file.fileURL}
@@ -178,10 +178,10 @@ function Data({ files }) {
           <p></p>
         ) : (
           menu && (
-            <div className="p-3 flex gap-10 flex-wrap ">
+            <div className="p-3 flex gap-10 flex-wrap sm:justify-center">
               {newFiles.map((file, idx) => (
                 <div key={file.id}>
-                  <div className="w-[350px] h-[200px] bg-[#F0F5F8] p-3 rounded-lg flex flex-col gap-4 cursor-pointer dark:bg-[#282A2C]">
+                  <div className="w-[350px] h-[200px] bg-[#F0F5F8] p-3 rounded-lg flex flex-col gap-4 cursor-pointer dark:bg-[#282A2C] ">
                     <p>{file.fileName.slice(0, 25)}.....</p>
 
                     <p className="bg-[#fff] w-[200px] p-5 text-center rounded-lg m-auto dark:bg-[#1d1d1e]">

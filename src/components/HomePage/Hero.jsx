@@ -194,14 +194,14 @@ function Hero() {
           </div>
         </Box>
       </Modal>
-      <div className="w-[100%] flex my-14">
+      <div className="w-[100%] flex my-14 sm:flex-col lg:flex-row lg:my-20">
         {/* left section */}
-        <div className="w-[50%] pl-20 my-10">
+        <div className="w-[50%] pl-20 my-10 sm:w-full sm:pl-5 sm:my-0 lg:pl-20 ">
           <div className="flex flex-col gap-8">
-            <p className="text-7xl w-[100%]">
+            <p className="text-7xl w-[100%] sm:text-2xl md:text-4xl lg:text-7xl lg:w-[80%]">
               Easy and secure access to your content
             </p>
-            <p className="text-2xl w-[75%]">
+            <p className="text-2xl w-[75%] sm:text-xl lg:text-2xl lg:w-[80%]">
               Store, share, and collaborate on files and folders from your
               mobile device, tablet, or computer
             </p>
@@ -215,8 +215,8 @@ function Hero() {
         </div>
 
         {/* right section */}
-        <div className="w-[50%]">
-          <img src={RIGHT_IMG} alt="" className="w-[90%]" />
+        <div className="w-[50%] sm:w-full ">
+          <img src={RIGHT_IMG} alt="" className="w-[90%] sm:m-auto" />
         </div>
       </div>
     </div>

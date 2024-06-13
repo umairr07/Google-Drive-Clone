@@ -131,7 +131,7 @@ function Siderbar() {
         </Box>
       </Modal>
 
-      <div className="flex">
+      <div className="flex sm:flex-col lg:flex-row">
         <div className="w-[20%] p-2">
           <div
             className="flex items-center w-[100px] p-3 ml-2 gap-2 rounded-lg cursor-pointer bg-[#f5f5f5] hover:bg-[#E9EEF6] dark:bg-[#37393B] dark:hover:bg-[#131314]"
@@ -141,16 +141,16 @@ function Siderbar() {
             <span>New</span>
           </div>
 
-          <div className="pl-5 flex flex-col gap-2 my-5 justify-center ">
+          <div className="pl-5 flex flex-col gap-2 my-5 justify-center sm:my-0 lg:my-5">
             <Link to="/drive">
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] bg-[#E9EEF6] p-2  rounded-2xl dark:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] w-[250px] bg-[#E9EEF6] p-2  rounded-2xl dark:bg-[#282A2C] sm:hidden lg:flex">
                 <GoHomeFill className="text-2xl" />
                 <span>Home</span>
               </div>
             </Link>
             <Link to="/mydrive">
               <div
-                className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]"
+                className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C] sm:hidden lg:flex"
                 // onClick={goToMyDrive}
               >
                 <FaGoogleDrive className="text-2xl" />
@@ -158,60 +158,60 @@ function Siderbar() {
               </div>
             </Link>
             <Link to={"/computer"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C] sm:hidden lg:flex lg:gap-5">
                 <FaComputer className="text-2xl" />
                 <span>Computers</span>
               </div>
             </Link>
 
             <Link to={"/starred"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C] sm:hidden lg:flex lg:gap-5">
                 <FaUserFriends className="text-2xl" />
                 <span>Shared with me</span>
               </div>
             </Link>
 
             <Link to={"/recent"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C] sm:hidden lg:flex lg:gap-5">
                 <MdOutlineWatchLater className="text-2xl" />
                 <span>Recent</span>
               </div>
             </Link>
 
             <Link to={"/shared"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C] sm:hidden lg:flex lg:gap-5">
                 <IoMdStarOutline className="text-2xl" />
                 <span>Starred</span>
               </div>
             </Link>
 
             <Link to={"/spam"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C] sm:hidden lg:flex lg:gap-5">
                 <RiSpam2Line className="text-2xl" />
                 <span>Spam</span>
               </div>
             </Link>
 
             <Link to={"/bin"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C] sm:hidden lg:flex lg:gap-5">
                 <RiDeleteBin6Line className="text-2xl" />
                 <span>Bin</span>
               </div>
             </Link>
 
             <Link to={"/storage"}>
-              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C]">
+              <div className="flex items-center gap-5 cursor-pointer h-[40px] hover:bg-[#E9EEF6] hover:rounded-2xl hover:w-[250px] p-2 dark:hover:bg-[#282A2C] sm:hidden lg:flex lg:gap-5">
                 <TiCloudStorageOutline className="text-2xl" />
                 <span>Storage</span>
               </div>
             </Link>
-            {/* <div>
+          </div>
+          {/* <div>
               <ScreenreaderLabelExample />
             </div> */}
-          </div>
         </div>
 
-        <div className="w-[80%] bg-[#fff] m-4 p-3 rounded-xl dark:bg-[#131314]">
+        <div className="w-[80%] bg-[#fff] m-4 p-3 rounded-xl dark:bg-[#131314] sm:w-full sm:m-auto lg:m-5">
           <Data files={files} />
         </div>
       </div>

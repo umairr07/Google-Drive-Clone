@@ -205,12 +205,16 @@ function Navbar() {
         </Box>
       </Modal>
 
-      <div className="flex justify-between p-2">
+      <div className="flex justify-between p-2 sm:justify-between">
         <div className="flex items-center">
-          <img src={GDRIVE} alt="" className="h-[45px] w-[50px]" />
-          <p>
-            <span className="font-bold text-2xl">Google</span>{" "}
-            <span className="text-2xl">Drive</span>
+          <img
+            src={GDRIVE}
+            alt=""
+            className=" lg:h-[45px] lg:w-[50px] sm:h-[30px] sm:w-[40px]"
+          />
+          <p className="sm:flex lg:gap-2">
+            <span className="lg:font-bold lg:text-2xl sm:text-xl">Google</span>{" "}
+            <span className="lg:text-2xl sm:text-xl">Drive</span>
           </p>
         </div>
 
@@ -222,7 +226,7 @@ function Navbar() {
             Sign in
           </button>
           <button
-            className="p-2 font-semibold bg-[#1A73E8] text-[#fff] rounded-lg w-[120px]"
+            className="p-2 font-semibold bg-[#1A73E8] text-[#fff] rounded-lg w-[120px] sm:hidden md:block"
             // onClick={gotoDrive}
           >
             Go to Drive
