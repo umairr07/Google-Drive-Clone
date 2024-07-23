@@ -1,5 +1,5 @@
 import { GDRIVE } from "../../constants_urls/urls";
-
+import gDriveLogo from "../../assets/g-drive-logo.png";
 import { GoQuestion } from "react-icons/go";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
@@ -67,7 +67,7 @@ function Header({ dataFiles }) {
     <div>
       <div className="flex my-1 p-2 items-center w-100% justify-between">
         <div className="flex items-center w-[20%] cursor-pointer">
-          <img src={GDRIVE} alt="" className="h-[45px] w-[50px]" />
+          <img src={gDriveLogo} alt="" className="h-[30px] w-[35px] mr-2" />
           <p>
             <span className="text-2xl">Drive</span>
           </p>

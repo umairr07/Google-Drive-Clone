@@ -31,7 +31,7 @@ function Siderbar() {
   const [file, setFile] = useState(null);
   const [files, setFiles] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
-  const [myDrive, setMyDrive] = useState(false);
+  // const [myDrive, setMyDrive] = useState(false);
 
   const auth = getAuth();
 
@@ -81,6 +81,12 @@ function Siderbar() {
         const snapshot = await uploadBytes(storageRef, file);
         const url = await getDownloadURL(snapshot.ref);
 
+        // console.log("File Name: ", file.name);
+        // console.log("File URL: ", url);
+        // console.log("File Size: ", snapshot.metadata.size);
+        // console.log("File Type: ", snapshot.metadata.contentType);
+        // console.log("User ID: ", currentUser.uid);
+
         await addDoc(collection(db, "myFiles"), {
           timestamp: serverTimestamp(),
           fileName: file.name,
@@ -97,6 +103,9 @@ function Siderbar() {
         console.error("Error uploading file: ", error);
         setUploading(false);
       }
+    } else {
+      console.error("No file selected");
+      setUploading(false);
     }
   };
 

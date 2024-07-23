@@ -16,7 +16,7 @@ function Data({ files }) {
   const [menu, setMenu] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [newFiles, setNewFiles] = useState(files);
-  const [anchorEl, setAnchorEl] = useState(null);
+  // const [anchorEl, setAnchorEl] = useState(null);
   // const [delFiles, setDelFiles] = useState([]);
   // const open = Boolean(anchorEl);
   // const handleClick = (event) => {

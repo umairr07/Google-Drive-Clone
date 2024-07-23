@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { GDRIVE, GOOGLE_LOGO } from "../../constants_urls/urls";
 import { auth, googleProvider } from "../../config/firebase";
+import gDriveLogo from "../../assets/g-drive-logo.png";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -161,7 +162,7 @@ function Navbar() {
       >
         <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-[550px] bg-white shadow-lg p-4 rounded-xl">
           <div className="flex flex-col justify-center items-center gap-5 my-2">
-            <img src={GOOGLE_LOGO} alt="" className="w-[100px]" />
+            {/* <img src={gDriveLogo} alt="" className="w-[50px]" /> */}
             <div className="text-center">
               <p className="text-xl font-semibold">Sign in</p>
               <p>to continue to Google Drive</p>
@@ -208,9 +209,9 @@ function Navbar() {
       <div className="flex justify-between p-2 sm:justify-between">
         <div className="flex items-center">
           <img
-            src={GDRIVE}
+            src={gDriveLogo}
             alt=""
-            className=" lg:h-[45px] lg:w-[50px] sm:h-[30px] sm:w-[40px]"
+            className=" lg:h-[30px] lg:w-[35px] sm:h-[30px] sm:w-[40px] mr-2"
           />
           <p className="sm:flex lg:gap-2">
             <span className="lg:font-bold lg:text-2xl sm:text-xl">Google</span>{" "}
