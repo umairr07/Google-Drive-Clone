@@ -4,13 +4,12 @@ import { getStorage } from "firebase/storage";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB3Kv7uanoQNSRl0rrIRFZp9EpmnZVTcbg",
-    authDomain: "drive-project-4d8eb.firebaseapp.com",
-    projectId: "drive-project-4d8eb",
-    storageBucket: "drive-project-4d8eb.appspot.com",
-    messagingSenderId: "490436577257",
-    appId: "1:490436577257:web:1b2eb7e3bd28047553ed78",
-    measurementId: "G-DNGWLWPC45"
+    apiKey: "AIzaSyCFI1WX9wdGi8Q0XW4-VCdPvFoKIWs3bkg",
+    authDomain: "drive-clone-b43ca.firebaseapp.com",
+    projectId: "drive-clone-b43ca",
+    storageBucket: "drive-clone-b43ca.appspot.com",
+    messagingSenderId: "923673545939",
+    appId: "1:923673545939:web:2b8c0fbc787137a8639826"
 };
 
 const app = initializeApp(firebaseConfig);
